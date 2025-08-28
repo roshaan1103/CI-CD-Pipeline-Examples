@@ -1,0 +1,14 @@
+name: Hello World Workflow
+
+on: [push] # Trigger the workflow on every push to the repository
+
+jobs:
+  build: # Define a job named 'build'
+    runs-on: ubuntu-latest # Specify the runner environment (e.g., Ubuntu Linux)
+
+    steps: # Define the steps within the 'build' job
+      - name: Checkout repository # First step: Check out the repository code
+        uses: actions/checkout@v4 # Use a pre-built action to checkout
+
+      - name: Run a simple script # Second step: Run a shell command
+        run: echo "Hello, GitHub Actions!" # Execute a simple echo command
